@@ -3,6 +3,10 @@
     = form_for @event, :url => events_path, :remote => true do |f|
       = f.label :name
       = f.text_field :name, :autofocus => true
+      = f.label :date
+      = f.text_field :date, :id => "datepicker"
+      = f.label :venue
+      = f.select "venue_id", @venues, {:include_blank => true})
       = f.submit(nil,:class => 'button')
       = button_to_function('Cancel', 'cancel_event_form()',:class=>'button')
   .large-7.columns
