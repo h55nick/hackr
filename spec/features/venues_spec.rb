@@ -26,9 +26,10 @@ describe 'Venues' do
       fill_in('Name',:with=>'Hoboken')
       click_button('Create Venue')
       #Tests
-      page.should have_text("Venue Added!")
+      page.should have_link('Add Venue')
+      page.should have_link('Add Event')
       page.should_not have_button('Create Venue')
-      expect(Venues.first.name).to eq 'Hoboken'
+      expect(Venue.first.name).to eq 'Hoboken'
     end
   end
 

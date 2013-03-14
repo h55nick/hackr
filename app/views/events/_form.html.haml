@@ -3,16 +3,9 @@
     = form_for @event, :remote => true do |f|
       = f.label :name
       = f.text_field :name, :autofocus => true
-<<<<<<< HEAD
-      = f.label :date
-      = f.text_field :date, :id => "datepicker"
-      = f.label :venue
-      = f.select "venue_id", @venues, {:include_blank => true})
-=======
       = f.label :eventdate
-      = f.text_field :eventdate, :autofocus => true
-      = f.select :id, options_for_select(@venues.map{|venue| venue.name})
->>>>>>> 4459036cee737e6c62c3b4cf04bf7f883945ba0f
+      = f.text_field :eventdate, :id => "datepicker"
+      = f.select :venue_id, options_for_select(@venues.map{|venue| [venue.name ,venue.id]})
       = f.submit(nil,:class => 'button')
       = button_to_function('Cancel', 'cancel_event_form()',:class=>'button')
   .large-7.columns

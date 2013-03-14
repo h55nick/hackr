@@ -1,5 +1,8 @@
 class VenuesController < ApplicationController
 def splash
+    @venues = Venue.all
+    @events = Event.all
+
 #index page
 end
 
