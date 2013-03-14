@@ -8,7 +8,8 @@ end
   end
 
   def create
-
+    venue = Venue.create(params[:venue])
+    @venues = Venue.all
   end
 
 end

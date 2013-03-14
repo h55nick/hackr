@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Subscribers' do
+describe 'Venues' do
 
   describe 'Get /' do
     it 'displays Add Venue link' do
