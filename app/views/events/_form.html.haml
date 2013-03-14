@@ -6,7 +6,7 @@
       = f.label :name
       = f.text_field :name, :autofocus => true
       = f.label :eventdate
-      = f.text_field :eventdate, :id => "datepicker"
+      = f.text_field :eventdate, :id => "date"
       = f.select :venue_id, options_for_select(@venues.map{|venue| [venue.name ,venue.id]})
       %br
       %br

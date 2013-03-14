@@ -7,10 +7,10 @@
   font-family: 'Stalinist One', cursive;
 }
 
-
+$bg-color: #FFF6F5;
 body{
   color: #3E454C;
-  background-color: #FFF6F5;
+  background-color: $bg-color;
 }
 .inline{
   display: inline-block;
@@ -37,3 +37,19 @@ body{
   width: 100px;
   padding: 5px;
 }
+
+.centering {
+  margin: auto;
+}
+
+#venue_form, #event_form {
+  min-width: 400px;
+}
+
+div {
+  border: 1px solid $bg-color;
+}
+
+
+
+

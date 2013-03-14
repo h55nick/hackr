@@ -2,7 +2,6 @@
   - @venues.each do |venue|
     .venue
       =venue.name
-    -binding.pry
     - venue.events.sort_by(&:eventdate).each do |event|
       .event
         .ename.inline.eattr
