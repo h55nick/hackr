@@ -1,10 +1,10 @@
 %br
 %br
 .row
-  .large-5.columns
+  .large-4.columns
     = form_for @venue, :remote => true do |f|
       = f.label :name
       = f.text_field :name, :autofocus => true
       = f.submit(nil,:class => 'button')
-      = button_to_function('Cancel', 'cancel_venue_form()',:class=>'button')
+      = button_to_function('Cancel', 'cancel_venue_form()',:class=>'button alert')
   .large-7.columns

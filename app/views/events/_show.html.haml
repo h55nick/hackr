@@ -1,7 +1,11 @@
-%ul
-  - @events.each do |event|
-    %li
-      = event.name
-      = event.eventdate
-      - venueid = event.venue_id || 0
-      = Venue.find(venueid).name || ""
+.row.venues
+  - @venues.each do |venue|
+    .venue
+      =venue.name
+    -binding.pry
+    - venue.events.sort_by(&:eventdate).each do |event|
+      .event
+        .ename.inline.eattr
+          = event.name
+        .edate.inline.eattr
+          = event.eventdate

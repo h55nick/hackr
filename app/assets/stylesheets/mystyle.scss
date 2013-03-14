@@ -12,3 +12,28 @@ body{
   color: #3E454C;
   background-color: #FFF6F5;
 }
+.inline{
+  display: inline-block;
+}
+.venue{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+.events{
+  margin-top: 20px;
+}
+.event{
+  border: 1px black solid;
+  background-color: #FFF;
+  padding: 10px;
+}
+.event:hover{
+  background-color: rgba(255,255,255,.2);
+  box-shadow: 0 0 5px #111;
+  -webkit-tranform: scale(1.1);
+}
+.eattr{
+  width: 100px;
+  padding: 5px;
+}
