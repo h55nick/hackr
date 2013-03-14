@@ -1,29 +1,13 @@
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'rspec/autorun'
-require 'capybara/rspec'
-require 'database_cleaner'
+ENV["RAILS_ENV"] = "test"
+require File.expand_path('../../config/environment', __FILE__)
+require 'rails/test_help'
 
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
-RSpec.configure do |config|
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
-  end
+class ActiveSupport::TestCase
+  # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
+  #
+  # Note: You'll currently still have to declare fixtures explicitly in integration tests
+  # -- they do not yet inherit this setting
+  fixtures :all
 
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
-
-  config.color_enabled = true
-  config.tty = true
-  config.formatter = :documentation
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  config.use_transactional_fixtures = false
-  config.infer_base_class_for_anonymous_controllers = false
-  config.order = "random"
+  # Add more helper methods to be used by all tests here...
 end
