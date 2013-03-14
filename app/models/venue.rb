@@ -1,5 +1,3 @@
 class Venue < ActiveRecord::Base
-attr_accessor :name
-  def initialize
-  end
+  attr_accessible  :name
 end
