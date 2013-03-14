@@ -1,8 +1,11 @@
 .row
   .large-5.columns
-    = form_for @event, :url => events_path, :remote => true do |f|
+    = form_for @event, :remote => true do |f|
       = f.label :name
       = f.text_field :name, :autofocus => true
+      = f.label :eventdate
+      = f.text_field :eventdate, :autofocus => true
+      = f.select :id, options_for_select(@venues.map{|venue| venue.name})
       = f.submit(nil,:class => 'button')
       = button_to_function('Cancel', 'cancel_event_form()',:class=>'button')
   .large-7.columns
