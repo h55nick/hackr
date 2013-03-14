@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     #@venue = Venue.where(params[:event][:venue])
     #params[:event][:venue] = @venue
     event = Event.create(params[:event])
-    @events = Event.all
+    @venues = Venue.all
   end
 
 end

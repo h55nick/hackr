@@ -1,0 +1,10 @@
+.row.venues
+  - @venues.each do |venue|
+    .venue
+      =venue.name
+    - venue.events.sort_by(&:eventdate).each do |event|
+      .event
+        .ename.inline.eattr
+          = event.name
+        .edate.inline.eattr
+          = event.eventdate
