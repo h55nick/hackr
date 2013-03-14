@@ -1,3 +1,5 @@
+%br
+%br
 .row
   .large-5.columns
     = form_for @event, :remote => true do |f|
@@ -6,6 +8,8 @@
       = f.label :eventdate
       = f.text_field :eventdate, :id => "datepicker"
       = f.select :venue_id, options_for_select(@venues.map{|venue| [venue.name ,venue.id]})
+      %br
+      %br
       = f.submit(nil,:class => 'button')
       = button_to_function('Cancel', 'cancel_event_form()',:class=>'button')
   .large-7.columns

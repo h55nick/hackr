@@ -1,11 +1,12 @@
 .row
-  .large-7.columns
+  .large-4.columns
     =link_to("Add Venue",new_venue_path, :remote=>true)
+  .large-4.columns
     =link_to("Add Event", new_event_path, :remote => true)
-    .row
-      .large-4.columns
-        #venue_form
-      .large-4.columns#results_show
-        = render :partial => 'events/show'
-      .large-4.columns
-        #event_form
+.row
+  .large-4.columns
+    #venue_form
+  .large-4.columns#results_show
+    = render :partial => 'events/show'
+  .large-4.columns
+    #event_form
