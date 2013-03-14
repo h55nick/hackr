@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render :partial => 'layouts/header'%>
+<div class='row'>
+<div class='titlebar'>
+  <span id ='title'><h2>Hackr-Place</h2></span>
+  <span id='tag'><h4>Where to hack next?</h4></span>
+</div>
+</div>
+  <div class='row'>
+    <%= yield %>
+  </div>
 
-<%= yield %>
+  <%= render :partial => 'layouts/footer'%>
 
 </body>
 </html>
