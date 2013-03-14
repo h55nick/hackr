@@ -13,7 +13,7 @@ require 'spec_helper'
     it 'has name, date' do
       event= Event.create(name:'API', eventdate:"1/1/2011")
       expect(event.name).to eq 'API'
-      expect(event.date).to eq Date.parse('1/1/2011')
+      expect(event.eventdate).to eq '1/1/2011'
     end
   end
 end
