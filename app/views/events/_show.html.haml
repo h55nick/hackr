@@ -3,5 +3,5 @@
     %li
       = event.name
       = event.eventdate
-      / - venueid = event.venue_id || 0
-      / = Venue.find(venueid).name || ""
+      - venueid = event.venue_id || 0
+      = Venue.find(venueid).name || ""
