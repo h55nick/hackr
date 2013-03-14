@@ -21,8 +21,6 @@ describe Venue do
     end
   end
 end
-
-
 # it 'has username, email, password and password_confirmation' do
 #         subscriber = Subscriber.new(username: 'bob', email: 'bob@gmail.com', password:'a', password_confirmation: 'a')
 #         expect(subscriber.username).to eq 'bob'

@@ -12,15 +12,8 @@ require 'spec_helper'
 
     it 'has name, date' do
       event= Event.new(name:'API', date:"1/1/2011")
-      expect(subscriber.name).to eq 'API'
-      expect(subscriber.email).to eq '1/1/2011'
-
+      expect(event.name).to eq 'API'
+      expect(event.date).to eq '1/1/2011'
     end
- end
-
-
-
-
-
-
+  end
 end
